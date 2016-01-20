@@ -17,18 +17,30 @@ gulp.task('lint',function(){
 
 //编译Sass
 gulp.task('sass',function(){
-  gulp.src('./scss/*.scss')
+  gulp.src('./src/bootstrap/scss/*.scss')
   .pipe(sass())
-  .pipe(gulp.dest('./css'));
+  .pipe(gulp.dest('./dest/bootstrap/css'));
+});
+
+gulp.task('bootstrap',function(){
+  gulp.src('./src/bootstrap/scss/bootstrap.scss')
+  .pipe(sass())
+  .pipe(rename({
+    suffix : '.min'
+  }))
+  .pipe(gulp.dest('./dest/bootstrap/css'));
 });
 
 //合并，压缩文件
 gulp.task('scripts',function() {
-  gulp.src('./src/bootstrap/js/*.js')
+  gulp.src('src/bootstrap/js/*.js')
   .pipe(concat('all.js'))
-  .pipe(gulp.dest('./dest/bootstrap/js'))
+  .pipe(gulp.dest('dest/bootstrap/js'))
+  .pipe(rename({
+    suffix : '.min'
+  }))
   .pipe(uglify())
-  .pipe(gulp.dest('./dest/bootstrap/js'));
+  .pipe(gulp.dest('dest/bootstrap/js'));
 });
 
 
@@ -47,9 +59,10 @@ gulp.task('help',function () {
 /* 默认 */
 
 gulp.task('default',function () {
-  gulp.run('lint','sass','scripts');
+  gulp.run('sass','scripts','bootstrap');
   //监听文件变化
-  gulp.watch('./js/*.js',function(){
-    gulp.run('lint','sass','scripts');
-  });
+  gulp.watch('./src/bootstrap/scss/*.scss',['sass']);
+  gulp.watch('./src/bootstrap/scss/bootstrap/*scss',['bootstrap']);
+  gulp.watch('src/bootstrap/js/*.js',['scripts']);
+  
 });
