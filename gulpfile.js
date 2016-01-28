@@ -34,7 +34,7 @@ gulp.task('bootstrap',function(){
 //合并，压缩文件
 gulp.task('scripts',function() {
   gulp.src('src/bootstrap/js/*.js')
-  .pipe(concat('all.js'))
+  // .pipe(concat('all.js'))
   .pipe(gulp.dest('dest/bootstrap/js'))
   .pipe(rename({
     suffix : '.min'
@@ -64,5 +64,5 @@ gulp.task('default',function () {
   gulp.watch('./src/bootstrap/scss/*.scss',['sass']);
   gulp.watch('./src/bootstrap/scss/bootstrap/*scss',['bootstrap']);
   gulp.watch('src/bootstrap/js/*.js',['scripts']);
-  
+
 });
