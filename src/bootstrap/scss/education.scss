@@ -1,0 +1,162 @@
+@media screen and (max-width: 768px) {
+  .for-scroll {
+    padding-top: 50px;
+  }
+  #project-manage {
+    .put-it-in-center{
+      width: 100%;
+    }
+    ul {
+      li {
+        list-style: none;
+        width: 100%!important;;
+        float: none;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  #project-manage {
+    width: 95%;
+  }
+}
+
+@media (min-width: 768px) {
+  .my-container {
+    width: 780px;
+  }
+  .for-scroll {
+    padding-top: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .my-container {
+    width: 970px;
+    padding: 23px 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .my-container {
+    width: 1170px;
+    padding: 23px 0;
+  }
+}
+
+.margin-top-10 {
+  margin-top: 10px;
+}
+
+body {
+  position: relative;
+  .left-column {
+    width: 16%;
+  }
+  .content-back {
+    //background-color: #f8f8f8;
+    #student-info {
+      //background-color: #1E88E5;
+    }
+    #project-manage {
+      //background-color: #673ab7;
+    }
+    #course-info {
+      background-color: #ff9800;
+    }
+    #teacher-info {
+      background-color: #00bcd4;
+    }
+    .my-table-head {
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+  .navbar-right {
+    margin-top: 18px;
+    li {
+      list-style: none;
+      float: left;
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      span {
+        background: #a7a7a7;
+        width: 1px;
+        height: 9px;
+        display: block;
+        margin: 8px 8px;
+      }
+    }
+  }
+  .for-photo {
+
+  }
+  table {
+    .first-col {
+      width: 12%;;
+    }
+    .second-col {
+      width: 28%;
+    }
+  }
+  #project-manage {
+    margin: 0 auto;
+    h3 {
+      font-size: 26px;
+      line-height: 30px;
+      text-align: center;
+      color: #444;
+      margin-bottom: 55px;
+    }
+    ul {
+      li{
+        list-style: none;
+        width: 198px;
+        float: left;
+        text-align: center;
+        a {
+          color: #333;
+          text-decoration: none;
+        }
+        span {
+          background: #a7a7a7;
+          width: 1px;
+          height: 9px;
+          display: block;
+          margin: 8px 8px;
+        }
+        div {
+          padding: 0px 14px;
+          height: 70px;
+          line-height: 20px;
+          border-right: 1px solid #f0f0f0
+        }
+      }
+    }
+    .put-it-in-center {
+      width: 690px;
+      margin: 0 auto;
+    }
+  }
+  .modal-dialog{
+    width: 70%;
+  }
+
+  .carousel{
+    .carousel-picture-style{
+      height: 600px;
+      width: 100%;
+    }
+  }
+  .advice-about-school{
+    img{
+      width: 100%;
+    }
+  }
+
+
+}

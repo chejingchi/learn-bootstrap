@@ -44,6 +44,28 @@ gulp.task('scripts',function() {
 });
 
 
+gulp.task("my-js-common",function(){
+  gulp.src("src/js/common/*js")
+      .pipe(gulp.dest("dest/js/common"))
+      .pipe(rename({
+        suffix : '.min'
+      }))
+      .pipe(uglify())
+      .pipe(gulp.dest("dest/js/common"))
+});
+
+
+gulp.task("my-js",function(){
+  gulp.src("src/js/*js")
+      .pipe(gulp.dest("dest/js"))
+      .pipe(rename({
+        suffix : '.min'
+      }))
+      .pipe(uglify())
+      .pipe(gulp.dest("dest/js"))
+});
+
+
 gulp.task('help',function () {
 
   console.log('	gulp build			文件打包');
@@ -59,10 +81,11 @@ gulp.task('help',function () {
 /* 默认 */
 
 gulp.task('default',function () {
-  gulp.run('sass','scripts','bootstrap');
+  gulp.run('sass','scripts','bootstrap','my-js','my-js-common');
   //监听文件变化
   gulp.watch('./src/bootstrap/scss/*.scss',['sass']);
   gulp.watch('./src/bootstrap/scss/bootstrap/*scss',['bootstrap']);
   gulp.watch('src/bootstrap/js/*.js',['scripts']);
-
+  gulp.watch("src/js/common/*js",["my-js-common"]);
+  gulp.watch("src/js/*js",["my-js"]);
 });

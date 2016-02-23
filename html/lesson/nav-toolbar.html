@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../../dest/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../dest/bootstrap/css/nav-toolbar.css"/>
+    <script src="../../dest/bootstrap/js/jquery-1.12.0.min.js"></script>
+    <script src="../../dest/bootstrap/js/bootstrap.min.js"></script>
+    <title>nav-toolbar</title>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#my-first-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+
+        </button>
+        <a class="navbar-brand">project</a>
+    </div>
+    <div class="collapse navbar-collapse" id="my-first-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a>ios</a></li>
+            <li><a>c++</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    java
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a>j2ee</a></li>
+                    <li><a>alibaba</a></li>
+                    <li><a>jdbc</a></li>
+                    <li class="divider"></li>
+                    <li><a>j2me</a></li>
+                </ul>
+            </li>
+            <li><a>c sharp</a></li>
+            <li><a>rube</a></li>
+        </ul>
+        <div>
+            <p class="navbar-text">test</p>
+        </div>
+        <form class="navbar-form navbar-right">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="search">
+            </div>
+            <button type="submit" class="btn btn-primary">submit</button>
+        </form>
+    </div>
+</nav>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#my-navbar-collapse">
+            <span class="sr-only">切换导航</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+
+        </button>
+        <a class="navbar-brand">project</a>
+    </div>
+    <div class="collapse navbar-collapse" id="my-navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a>ios</a></li>
+            <li><a>c++</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    java
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a>j2ee</a></li>
+                    <li><a>alibaba</a></li>
+                    <li><a>jdbc</a></li>
+                    <li class="divider"></li>
+                    <li><a>j2me</a></li>
+                </ul>
+            </li>
+            <li><a>c sharp</a></li>
+            <li><a>rube</a></li>
+        </ul>
+        <div>
+            <p class="navbar-right navbar-text">sign in as
+                <a href="#" class="navbar-link">Thomas</a>
+            </p>
+
+        </div>
+    </div>
+</nav>
+</body>
+</html>
