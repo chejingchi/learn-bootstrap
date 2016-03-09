@@ -11,3 +11,9 @@
 
 #paging input {
   width: 40px; }
+
+table .first-col {
+  width: 12%; }
+
+table .second-col {
+  width: 28%; }
