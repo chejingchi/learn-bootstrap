@@ -244,18 +244,16 @@ $(function () {
         },
         showBookDetailInfo: function (bookRow) {
             $($(bookRow).find("td")[0]).text();
-            var bookDetailInfo = '<div class="row"><form class="form-horizontal" role="form">' +
-                '<div class="row"><div class="form-group col-sm-3"><label class=" col-sm-6 control-label">' +
-                '书籍名称:</label> <p class="col-sm-6 control-label text-left">' + data.bookInfo.bookName +
-                '</p> </div> <div class="form-group col-sm-3"><label class=" col-sm-6 control-label">' +
-                '作者:</label> <label class="col-sm-6 control-label">' + data.bookInfo.author +
-                '</label></div><div class="form-group col-sm-3"><label class=" col-sm-6 control-label">' +
-                '页数:</label> <label class="col-sm-6 control-label">' + data.bookInfo.pages +
-                '</label> </div> <div class="form-group col-sm-3"><label class=" col-sm-6 control-label">' +
-                '版本:</label> <label class="col-sm-6 control-label">' + data.bookInfo.version +
-                '</label> </div> </div> <div class="media-body" style="padding-left: 20px;padding-right: 20px">' +
-                '<h4 class="media-heading">图书简介:</h4>' + data.bookInfo.bookBriefIntroduction +
-                '</div></form></div>';
+            var bookDetailInfo = '<table class="table"><tbody><tr><td class="book-info-width">书籍名称:</td> ' +
+                '<td class="book-info-width">' + data.bookInfo.bookName +
+                '</td> <td class="book-info-width">作者:</td> <td class="book-info-width">' + data.bookInfo.author +
+                '</td> </tr> <tr> <td>页数:</td> <td>' + data.bookInfo.pages +
+                '</td> <td>版本:</td> <td>' + data.bookInfo.version +
+                '</td> </tr> <tr> <td>出版社:</td> <td>' + data.bookInfo.publishingHouse +
+                '</td> <td>类型:</td> <td>' + data.bookInfo.type +
+                '</td> </tr> <tr> <td rowspan="2"  class="info-brief">图书简介:</td> ' +
+                '<td rowspan="2" colspan="3">' + data.bookInfo.bookBriefIntroduction +
+                '</td> </tr> </tbody> </table>';
             $("#book-detail-info").find(".modal-body").html(bookDetailInfo);
 
         }
